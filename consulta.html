@@ -1,0 +1,63 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Consulta de inquilinos — Alamedas de Santa Ana</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js"></script>
+  <script src="assets/app.js" defer></script>
+</head>
+<body onload="AlApp.initConsulta()">
+  <div class="container">
+    <nav class="nav">
+      <div class="brand">🏡 Alamedas de Santa Ana</div>
+      <div>
+        <a href="index.html">Inicio</a>
+        <a href="calendar.html">Calendario</a>
+        <a href="consulta.html">Consulta de inquilinos</a>
+      </div>
+    </nav>
+
+    <section class="card">
+      <h2>Consulta de estado de cuota</h2>
+      <form id="frmConsulta" novalidate>
+        <label for="dpi">DPI</label>
+        <input id="dpi" name="dpi" required pattern="[0-9\-\s]{13,17}" placeholder="13 dígitos" />
+        <label for="casa">Número de Casa</label>
+        <input id="casa" name="casa" type="number" required min="1" />
+        <label for="nombre">Primer Nombre</label>
+        <input id="nombre" name="nombre" required />
+        <label for="apellido">Primer Apellido</label>
+        <input id="apellido" name="apellido" required />
+        <label for="fnac">Fecha de Nacimiento</label>
+        <input id="fnac" name="fnac" type="date" required />
+        <div class="helper">Los datos deben coincidir con el registro del inquilino.</div>
+        <button id="btnConsultar" type="button">Consultar</button>
+        <div id="status" class="status" role="status"></div>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Historial de pagos</h2>
+      <div class="grid">
+        <div>
+          <label for="histStart">Desde</label>
+          <input id="histStart" type="date" />
+        </div>
+        <div>
+          <label for="histEnd">Hasta</label>
+          <input id="histEnd" type="date" />
+        </div>
+      </div>
+      <button id="btnHistorial" type="button" style="margin-top:.75rem">Ver historial</button>
+      <div id="historial" style="margin-top:.75rem"></div>
+    </section>
+
+    <footer>
+      © 2025 Alamedas de Santa Ana — Proyecto académico
+    </footer>
+  </div>
+</body>
+</html>

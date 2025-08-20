@@ -1,0 +1,56 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Alamedas de Santa Ana — Portal</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js"></script>
+  <script src="assets/app.js" defer></script>
+</head>
+<body onload="AlApp.initInicio()">
+  <div class="container">
+    <nav class="nav">
+      <div class="brand">🏡 Alamedas de Santa Ana</div>
+      <div>
+        <a href="index.html">Inicio</a>
+        <a href="calendar.html">Calendario</a>
+        <a href="consulta.html">Consulta de inquilinos</a>
+      </div>
+    </nav>
+
+    <header class="hero card">
+      <span class="badge">Portal del residencial</span>
+      <h1>Bienvenidos a Alamedas de Santa Ana</h1>
+      <p>Este portal permite a los inquilinos conocer noticias, eventos y consultar el estado de sus cuotas de mantenimiento.</p>
+    </header>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Integrantes</h2>
+        <p><strong>Reemplaza con los nombres de tu grupo</strong></p>
+        <ul>
+          <li>Corina Maribel Pérez González</li>
+
+        </ul>
+        <h2>Descripción del residencial</h2>
+        <p>Alamedas de Santa Ana es un residencial familiar con áreas verdes, seguridad 24/7 y espacios de convivencia para todos.</p>
+        <h3>Ubicación</h3>
+        <p>Santa Ana, Guatemala. (Reemplaza por la dirección real si aplica)</p>
+        <div class="helper">Puedes insertar un mapa o video aquí (iframe).</div>
+      </article>
+      <aside class="card">
+        <h2>Noticias recientes</h2>
+        <div id="news">
+          <div class="helper">Cargando noticias...</div>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      © 2025 Alamedas de Santa Ana — Proyecto académico
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Calendario — Alamedas de Santa Ana</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js"></script>
+  <script src="assets/app.js" defer></script>
+</head>
+<body onload="AlApp.initCalendario()">
+  <div class="container">
+    <nav class="nav">
+      <div class="brand">🏡 Alamedas de Santa Ana</div>
+      <div>
+        <a href="index.html">Inicio</a>
+        <a href="calendar.html">Calendario</a>
+        <a href="consulta.html">Consulta de inquilinos</a>
+      </div>
+    </nav>
+
+    <section class="card">
+      <h2 id="calTitle">Calendario</h2>
+      <div class="calendar-controls">
+        <label for="selMonth" class="helper">Mes</label>
+        <select id="selMonth"></select>
+        <label for="selYear" class="helper">Año</label>
+        <select id="selYear"></select>
+      </div>
+      <div class="calendar" id="calendarGrid" aria-live="polite"></div>
+    </section>
+
+    <div class="modal-backdrop" id="backdrop">
+      <div class="modal" id="modal">
+        <h3 id="modalTitle">Evento</h3>
+        <p id="modalText"></p>
+        <button id="closeModal">Cerrar</button>
+      </div>
+    </div>
+
+    <footer>
+      © 2025 Alamedas de Santa Ana — Proyecto académico
+    </footer>
+  </div>
+</body>
+</html>
