@@ -1,0 +1,50 @@
+
+:root{
+  --bg:#0b1321;
+  --card:#111a2b;
+  --accent:#3ba3ff;
+  --text:#e9f0ff;
+  --muted:#b7c2d9;
+  --danger:#ff5d5d;
+  --ok:#39d98a;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif;line-height:1.5}
+a{color:var(--accent);text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:1rem}
+.nav{display:flex;gap:.75rem;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:1rem}
+.nav a{padding:.6rem .9rem;border-radius:999px;background:var(--card);}
+.brand{font-weight:700;font-size:1.1rem}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.card{background:var(--card);border-radius:16px;padding:1rem;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.card h2{margin-top:0}
+.hero{display:flex;flex-direction:column;gap:.6rem;margin:1rem 0}
+.badge{display:inline-block;padding:.2rem .5rem;border-radius:6px;background:#0f233d;color:var(--muted);font-size:.8rem}
+footer{margin:2rem 0;color:var(--muted);font-size:.9rem}
+
+.news-item{padding:.5rem;border-left:3px solid var(--accent);background:#0f1b2e;border-radius:8px;margin:.5rem 0}
+.news-item time{display:block;color:var(--muted);font-size:.85rem}
+
+.calendar-controls{display:flex;gap:.5rem;align-items:center;margin-bottom:1rem}
+.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:.5rem}
+.calendar .day{background:var(--card);min-height:90px;border-radius:12px;padding:.5rem;display:flex;flex-direction:column;gap:.25rem}
+.calendar .day .date{font-weight:700;color:var(--muted);font-size:.9rem}
+.event{font-size:.9rem;padding:.2rem .4rem;border-radius:8px;background:#0f233d;cursor:pointer}
+
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;padding:1rem}
+.modal{background:var(--card);border-radius:16px;padding:1rem;max-width:520px;width:100%}
+.modal h3{margin-top:0}
+.modal.show+.modal-backdrop, .modal-backdrop.show{display:flex}
+
+form label{display:block;margin-top:.75rem;margin-bottom:.25rem;color:var(--muted)}
+input,select,button{width:100%;padding:.7rem;border-radius:12px;border:1px solid #22314f;background:#0f1b2e;color:var(--text)}
+button{cursor:pointer;border:0;background:var(--accent);font-weight:600}
+input:invalid{border-color:var(--danger)}
+.helper{font-size:.85rem;color:var(--muted)}
+.status{margin-top:.75rem;padding:.7rem;border-radius:12px}
+.status.ok{background:rgba(57,217,138,.12);border:1px solid var(--ok);color:var(--ok)}
+.status.bad{background:rgba(255,93,93,.12);border:1px solid var(--danger);color:var(--danger)}
+
+@media (max-width: 850px){
+  .grid{grid-template-columns:1fr}
+}
